@@ -10,7 +10,7 @@
 -   If you don't know what site it is for, I do not know how you got this
 
 ## Implementation
--   Python using Beautiful Soup 4 ( Thanks guys :) )
+-   Python using Beautiful Soup 4 ( Thanks guys 😀 )
 
 ## Credit
 -   Beautiful Soup 4
