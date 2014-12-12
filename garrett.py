@@ -8,6 +8,8 @@ def main():
 	gold = theCity.text
 
 	blackjack = BeautifulSoup(gold)
+	
+	cards = blackjack.find('div',attrs={"class":"content-block content-block-body content-block-note content-block-bg"})
 	for link in blackjack.find_all('a'):
 		print link.get('href')
 
