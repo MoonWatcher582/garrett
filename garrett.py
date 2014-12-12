@@ -9,11 +9,17 @@ def main():
 
 	blackjack = BeautifulSoup(gold)
 	
-	cards = blackjack.find('div',attrs={"class":"content-block content-block-body content-block-note content-block-bg"}).find('div',attrs={"class":"wrap-container clearfix"}).find('div',attrs={"class":"card-container"}).find('div',attrs={"class":"clearfix"}).find('div',attrs={"class":"content-wrap"})
+	#body = blackjack.find('div',attrs={"class":"content-block content-block-body content-block-note content-block-bg"})
+	#clearfixContainer = body.find('div',attrs={"class":"wrap-container clearfix"})
+	#container = clearfixContainer.find('div',attrs={"class":"card-container"})
+	#clearfix = container.find('div',attrs={"class":"clearfix"})
+	cards = blackjack.findAll('div',class_='card')
+
+
 
 	for card in cards.findAll('div'):
 		for side in card.findAll('div'):
-			print side.find('div',attrs={"class":"side side-text"}).find('div',attrs={"class":"text text-small"})
+			print (side.find('div',attrs={"class":"side side-text"}).find('div',attrs={"class":"text text-small"}))
 
 if __name__ == '__main__':
 	main()
