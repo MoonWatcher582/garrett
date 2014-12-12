@@ -13,8 +13,13 @@ def main():
 	#clearfixContainer = body.find('div',attrs={"class":"wrap-container clearfix"})
 	#container = clearfixContainer.find('div',attrs={"class":"card-container"})
 	#clearfix = container.find('div',attrs={"class":"clearfix"})
-	cards = blackjack.findAll('div',class_='text', limit=2)
-	print(cards)
+	cards = blackjack.findAll('div',class_='text')
+
+	output_file = open(sys.argv[2], 'w')
+
+	for card in cards:
+		output_file.write( '%s\n\t' % card.text.strip())
+
 
 
 	#for card in cards.findAll('div'):
