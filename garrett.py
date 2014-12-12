@@ -9,7 +9,7 @@ def main():
 
 	blackjack = BeautifulSoup(gold)
 	
-	cards = blackjack.find('div',attrs={"class":"content-block content-block-body content-block-note content-block-bg"})
+	cards = blackjack.find('div',attrs={"class":"content-block content-block-body content-block-note content-block-bg"}).find('div',attrs={"class":"wrap-container clearfix"}).find('div',attrs={"class":"card-container"}).find('div',attrs={"class":"clearfix"}).find('div',attrs={"class":"content-wrap"})
 	for link in blackjack.find_all('a'):
 		print link.get('href')
 
