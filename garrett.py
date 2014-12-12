@@ -13,13 +13,13 @@ def main():
 	#clearfixContainer = body.find('div',attrs={"class":"wrap-container clearfix"})
 	#container = clearfixContainer.find('div',attrs={"class":"card-container"})
 	#clearfix = container.find('div',attrs={"class":"clearfix"})
-	cards = blackjack.findAll('div',class_='card')
+	cards = blackjack.findAll('div',class_='text', limit=2)
+	print(cards)
 
 
-
-	for card in cards.findAll('div'):
-		for side in card.findAll('div'):
-			print (side.find('div',attrs={"class":"side side-text"}).find('div',attrs={"class":"text text-small"}))
+	#for card in cards.findAll('div'):
+	#	for side in card.findAll('div'):
+	#		print (side.find('div',attrs={"class":"side side-text"}).find('div',attrs={"class":"text text-small"}))
 
 if __name__ == '__main__':
 	main()
